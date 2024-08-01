@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react'
 import { Box, Stack, Typography, Button, Modal, TextField } from '@mui/material'
 import { firestore } from '@/firebase'
+import React, { useState } from 'react';
+import { TextField } from '@mui/material';
 import {
   collection,
   doc,
@@ -27,6 +29,13 @@ const style = {
   gap: 3,
 }
 
+const SearchBar = async(item) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+};
 
 
 export default function Home() { 
@@ -43,7 +52,6 @@ export default function Home() {
     })
     setInventory(inventoryList)
   }
-  
   useEffect(() => {
     updateInventory()
   }, [])
@@ -122,10 +130,17 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      <Box border={'1px solid #333'}>
-        <Button variant="contained" onClick={handleOpen}>
+      <TextField
+      label="Search"
+      variant="outlined"
+      value={searchTerm}
+      onChange={handleSearch}
+      fullWidth
+    />
+      <Button variant="contained" onClick={handleOpen}>
           Add New Item
         </Button>
+      <Box border={'1px solid #333'}>
         <Box
           width="850"
           height="150"
