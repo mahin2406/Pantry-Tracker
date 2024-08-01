@@ -160,10 +160,12 @@ export default function Home() {
               </Typography>
               <Stack direction="row">
                 <Button variant="contained" 
+                size='small'
                 onClick={() => addItem(name)}>
                   Add
                 </Button>
                 <Button variant="contained" 
+                size='small'
                 onClick={() => removeItem(name)}>
                   Remove
                 </Button>
