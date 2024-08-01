@@ -27,13 +27,6 @@ const style = {
   gap: 3,
 }
 
-const SearchBar = async(item) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
-};
 
 
 export default function Home() { 
@@ -128,13 +121,7 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      <TextField
-      label="Search"
-      variant="outlined"
-      value={searchTerm}
-      onChange={handleSearch}
-      fullWidth
-    />
+
       <Button variant="contained" onClick={handleOpen}>
           Add New Item
         </Button>
