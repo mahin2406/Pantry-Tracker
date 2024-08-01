@@ -123,9 +123,12 @@ export default function Home() {
         </Box>
       </Modal>
       <Box border={'1px solid #333'}>
+        <Button variant="contained" onClick={handleOpen}>
+          Add New Item
+        </Button>
         <Box
-          width="90%"
-          height="150px"
+          width="850"
+          height="150"
           bgcolor={'#ADD8E6'}
           display={'flex'}
           justifyContent={'center'}
@@ -134,9 +137,6 @@ export default function Home() {
           <Typography variant={'h2'} color={'#333'} textAlign={'center'}>
             Inventory Items
           </Typography>
-          <Button variant="contained" onClick={handleOpen}>
-            Add New Item
-          </Button>
         </Box>
         <Stack width="800px" height="300px" spacing={2} overflow={'auto'}>
           {inventory.map(({name, quantity}) => (
