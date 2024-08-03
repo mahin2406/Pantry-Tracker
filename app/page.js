@@ -82,15 +82,7 @@ export default function Home() {
   return 
   <Container sx={{height: "100vh", bgcolor:"tomato"}}>
     
-    <Box
-      width="100vw"
-      height="100vh"
-      display={'flex'}
-      justifyContent={'center'}
-      flexDirection={'column'}
-      alignItems={'center'}
-      gap={2}
-    >
+  
       <Modal
         open={open}
         onClose={handleClose}
@@ -177,7 +169,7 @@ export default function Home() {
           ))}
         </Stack>
       </Box>
-    </Box>
+    
   </Container>
   
 }
