@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Box, Stack, Typography, Button, Modal, TextField } from '@mui/material'
+import { Box, Stack, Typography, Button, Modal, TextField, Container } from '@mui/material'
 import { firestore } from '@/firebase'
 import {
   collection,
@@ -79,7 +79,9 @@ export default function Home() {
 
 
 
-  return (
+  return 
+  <Container sx={{height: "100vh", bgcolor:"tomato"}}>
+    
     <Box
       width="100vw"
       height="100vh"
@@ -176,6 +178,6 @@ export default function Home() {
         </Stack>
       </Box>
     </Box>
-  )
+  </Container>
   
 }
