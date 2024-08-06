@@ -129,8 +129,8 @@ export default function Home() {
         </Button>
       <Box border={'1px solid #333'}>
         <Box
-          width="800px"
-          height="100px"
+          width="850"
+          height="150"
           bgcolor={'#ADD8E6'}
           display={'flex'}
           justifyContent={'center'}
